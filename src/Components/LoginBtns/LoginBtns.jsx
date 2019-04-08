@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import TopNavElem from '../TopNavElem/TopNavElem';
 import UserMenu from '../UserMenu/UserMenu';
 import './LoginBtns.scss';
+import cog from '../../assets/cog.png';
 
 class LoginBtns extends Component {
   constructor(props) {
@@ -9,22 +10,25 @@ class LoginBtns extends Component {
     this.state = {
       loggedIn: this.props.loggedIn,
       username: 'Andrzej',
-      menuStyle: {display: 'block'}
+      menuVisible: true
     };
+    this.openMenu = this.openMenu.bind(this);
   }
 
   openMenu = e => {
-    this.setState({menuStyle: {display: 'none'}})
-    console.log('x');
-  }
+    e.preventDefault();
+    this.setState({menuVisible: !this.state.menuVisible});
+  };
 
   render() {
     if (this.state.loggedIn) {
       return (
         <div>
           Witaj, {this.state.username}
-          <button onClick={this.openMenu}>cog</button>
-          <UserMenu menuStyle={this.state.menuStyle}/>
+          <a href="#" onClick={this.openMenu}>
+            <img src={cog} alt="koło zębate" />
+          </a>
+          {this.state.menuVisible ? <UserMenu /> : null}
         </div>
       );
     } else {

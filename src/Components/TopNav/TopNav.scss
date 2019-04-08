@@ -1,1 +1,7 @@
 @import "../../static/colors.scss";
+
+.main-header {
+  &>ul>li {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../static/colors.scss';
+
+.whogetshelp-section {
+  & > div {
+    & > ul {
+      & > li {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        & > h4 {
+          width: 100%;
+          text-align: left;
+        }
+        & > div {
+          width: 40%;
+        }
+
+        & > .goals {
+          text-align: left;
+          font-style: italic;
+        }
+        & > .items {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
