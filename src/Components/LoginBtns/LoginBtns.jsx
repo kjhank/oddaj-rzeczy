@@ -9,12 +9,13 @@ class LoginBtns extends Component {
     this.state = {
       loggedIn: this.props.loggedIn,
       username: 'Andrzej',
-      menuStyle: {display: 'none'}
+      menuStyle: {display: 'block'}
     };
   }
 
   openMenu = e => {
-    this.setState({menuStyle: {display: 'block'}})
+    this.setState({menuStyle: {display: 'none'}})
+    console.log('x');
   }
 
   render() {
@@ -23,7 +24,7 @@ class LoginBtns extends Component {
         <div>
           Witaj, {this.state.username}
           <button onClick={this.openMenu}>cog</button>
-          <UserMenu style={this.state.menuStyle}/>
+          <UserMenu menuStyle={this.state.menuStyle}/>
         </div>
       );
     } else {

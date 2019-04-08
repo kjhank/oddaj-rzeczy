@@ -6,7 +6,7 @@ import LoginBtns from '../LoginBtns/LoginBtns';
 class Header extends Component {
   render() {
     return (
-      <header className="main-header">
+      <header className={this.props.className}>
         <LoginBtns loggedIn={true}/>
         <TopNav />
       </header>

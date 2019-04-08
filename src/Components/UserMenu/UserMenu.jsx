@@ -5,13 +5,13 @@ class UserMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      style: this.props.style
+      menuStyle: this.props.menuStyle
     };
   }
 
   render() {
     return (
-      <div className="user-menu" style={this.state.style}>
+      <div className="user-menu" style={this.state.menuStyle}>
         <ul>
           <li>
             <a href="/">Profil</a>
