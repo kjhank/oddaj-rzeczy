@@ -25,7 +25,7 @@ class LoginBtns extends Component {
       return (
         <div>
           Witaj, {this.state.username}
-          <a href="#" onClick={this.openMenu}>
+          <a href="/" onClick={this.openMenu}>
             <img src={cog} alt="koło zębate" />
           </a>
           {this.state.menuVisible ? <UserMenu /> : null}

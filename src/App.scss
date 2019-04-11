@@ -4,4 +4,15 @@
 
 body {
   color: $mainColor;
+  background-image: url(./assets/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 50%;
+  & a {
+    color: $mainColor;
+  }
+  & .App {
+    max-width: 1200px;
+    margin: auto;
+  }
 }
